@@ -1,0 +1,33 @@
+@media  (min-width:1024px) and (max-width:1920px) { /*Cambio destkop*/    
+.primero{
+    background-color: darkcyan;
+}
+p{
+    text-align:justify;
+}
+.container-fluid{
+color:rgb(41, 14, 14);
+font-size: 25px;
+     }
+   div{
+       padding: 1%;
+   }
+   body{
+       background-color:rgb(230, 219, 219) ;
+   }
+}
+@media (min-width:414px) and (max-width:736px){ /*Cambio de diseño Iphone*/
+   p{
+     color: honeydew  ;
+     font-size: 20px;
+     text-align:justify;
+   }
+   div,p,.primero{
+       background-color: rgb(65, 60, 60);
+   }
+   body{
+       background-color: rgb(211, 193, 193);
+    padding: 1%;
+    }
+
+}

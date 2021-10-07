@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'cssBoostrap/bootstrap.min.css' %}">    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+    <body>      <!--Cabecera-->
+        {% include "app/includes/navbar.html"%}
+                <!--Separacion de contenido-->
+                           
+                <!--Contenido Agrupado-->   
+                <main class="contenedor sombra">    
+                    <h2>Publicaciones</h2>
+                    <div class="container">
+                        <form>
+                            <div class="mb-3">
+                              <label for="titulo" class=" form-label">Titulo de la Publicacion</label>
+                              <input type="email" class="col-lg-6 form-control" id="titulo" aria-describedby="emailHelp">                        
+                            <div/>
+                            <br>
+                            <div class="input-group">
+                                <input type="file" class="col-lg-6 form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                                <button class="btn btn-outline-secondary btn-lg" type="button" id="inputGroupFileAddon04">Publicar</button>
+                              </div>
+                   
+          
+   
+       </body>    
+        </html>
+      

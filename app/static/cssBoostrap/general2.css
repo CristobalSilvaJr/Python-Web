@@ -1,0 +1,60 @@
+.capitulo2:hover,.capitulo:hover{
+    color: rgb(10, 2, 2);
+    border:1px solid rgb(223, 165, 165) ;
+}
+body{
+    background-color: rgb(250, 244, 244);
+    
+}
+#div{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding:1%;
+    font-size: 25px;
+    color: darkgray;
+}
+.ejemplo{
+    padding: 3px 10px;
+  border: rgb(223, 172, 172) 5px solid;
+  border-radius: 20px;
+  
+}
+@media (min-width:414px) and (max-width:736px){ /*Medida de Iphone*/
+    body{
+        padding: 3%;
+    }
+    .h1{
+        padding-bottom: 20px;
+    }
+     p{
+         font-size: 20px;
+         text-align: justify;
+         font-family: 'Times New Roman', Times, serif;
+
+     }
+     .reflexiona{
+         font-size: 18px;
+         color:black;       
+         
+     }
+     .reflexiona{
+         
+         padding-bottom: 1%;
+     }
+     .correo1{
+         padding-top: 8%;
+         font-size: 20px;   
+        
+     }
+    
+
+}
+@media (min-width: 736px) and (max-width: 1024px){/*Medida Ipad*/
+    body{
+        font-size: 20px;
+        text-align: justify;
+    }
+    .correo1{
+        padding-top: 4%;
+    }
+}

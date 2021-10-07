@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <title>Login</title>
+</head>
+<body>
+
+    <form action="#" method="POST">
+       
+    <div class="container">
+        <h3 class="text-center">Inicio de Sesion</h3>  
+        {% csrf_token %}    {{form.as_p}}
+        <button class="btn btn-primary" type="submit" >Iniciar Sesion</button>
+</form> 
+        <span>Si no tienes una cuenta, <a href="crearUsuario">¡crea una aqui!</a></span><br>
+        <br>
+       <a href="index" button class="btn btn-success" type="submit" >Volver Atras</button></a>
+       
+  
+    </div><!--container -->
+</body>
+</html>

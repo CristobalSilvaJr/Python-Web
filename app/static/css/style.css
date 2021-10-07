@@ -1,0 +1,245 @@
+
+:root{
+    --navegador:#023e8A;
+    --navegador-select:#a9d6e5;
+    --letras:#ffffff;
+    --formulario:#6f32be; 
+    --dentroParrafo:#5e60ce;
+    --navegador-hov:#212121;
+    
+    }
+    html{
+        font-size: 62.5%;
+        box-sizing: border-box;
+        background-image: linear-gradient(to top , #c8e7ff 0%, var(--letras) 90% );
+        scroll-snap-type: y ;
+    } /*backbround image- linear gradient, nos dara un color en degradado   */
+    *, *:before, *:after { /* *:selecciona todo los elementos,  */
+        box-sizing: inherit;
+      }
+    
+    body{
+        font-size: 16px;
+        font-family: 'KoHo', sans-serif;
+    }
+    h1,h2,h3{
+        text-align: center;
+        font: 3.8rem;  
+    
+    }
+    /*Scroll y stop en diferentes secciones*/
+    .servicio, .navegador-principal,.formulario{
+        scroll-snap-align:center;
+        scroll-snap-stop: always ;
+    }
+    
+    .boton{
+        background-color: var(--formulario); /*Le damos color al rectangulo*/
+        padding: 1rem 3rem; /*Damos tamaño al rectangulo*/
+        text-decoration: none; /*Le quitamos la linea por debajo*/
+        border-radius: 0.8rem; /*Le damos un borde redondeado*/
+        color: var(--letras);
+        margin-top: 1rem; /*Separamos la altura*/
+        font-size: 2rem; /*Tamaño de textp*/
+        text-transform: uppercase; /*Poner en Mayuscula*/
+        font-weight: bold;
+        width: 85%;    
+        text-align: center; /*Alineamos el texto al centro*/
+        border: none;
+    }
+    
+    .contenedor{
+        max-width: 120rem;
+        margin:0 auto;
+    }
+    .sombra{
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(122,113,122,0.78);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(122,113,122,0.78);
+        box-shadow: 0px 0px 15px 0px rgba(122,113,122,0.78);
+        background-color: var(--letras);
+        padding: 3rem;
+        border-radius: 0.8rem; /*Le damos un borde redondeado*/
+        
+    }
+    .titulo  span{
+    font-size: 2rem;
+    }
+    .div-nav{
+        background-color: var(--navegador);
+    
+    }
+    .navegador-principal{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    .navegador-principal a{
+        display: block;
+        text-align: center;
+        color: var(--letras);
+        text-decoration: none;
+        font-size: 2rem; 
+        padding: 1rem;
+    
+    }
+    .navegador-principal a:hover{
+        background-color: var(--navegador-select);
+        color:var(--navegador-hov);
+    }
+    .seccion{
+        
+        background-image: url('imagenes/4884785.jpg');  
+        background-repeat: no-repeat;
+        background-size: cover; 
+        height: 450px;
+        position: relative;
+        margin-bottom:2rem ;
+    }
+    .seccion2{
+        position: absolute;
+        background-color:rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+    
+        display: flex; /*Coloca el contenido de izquierda a derecha*/
+        flex-direction: column; /*Se ira de arriba hacia abajo por secciones*/
+        align-items: center; /*Alineamos al centro*/
+        justify-content: center;/*Alineamos verticalmente*/
+    }
+    /*Seleccionamos contenido de seccion*/
+    .seccion h2,
+    .seccion p{
+        color: var(--letras);
+        
+    }
+    
+    
+    @media (min-width: 415px) {/*Iphone*/
+        .seccion{
+        background-size: cover;
+        height: 380px;
+         }
+         .boton{
+             width:30rem ;
+         }
+         .boton:hover{
+                cursor:pointer;
+         }
+        
+    }
+        /* Mis servicios */
+      
+    @media (min-width: 768px)  { /*Tablet*/
+        .navegador-principal{
+            flex-direction: row;
+           justify-content:space-between;
+        }
+        .seccion{
+           background-size: cover;
+       height: 380px;
+        }
+        .servicios{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /*Estamos diviendo el 100% en 3 columnas, con 1 fraccion*/
+            column-gap: 1rem;
+        }  
+        .contenedor-formulario{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto 20rem ;
+            column-gap: 1rem;
+        }
+        .campo:nth-child(3),.campo:nth-child(4){/*similar a un array, escogemos la clase dentro de un div*/
+        grid-column: 1 / 3;
+        }
+    
+       }
+     @media (min-width:1025px ) { /*Notebook*/
+    .seccion{
+        background-size: cover;
+        height: 450px;
+    }
+      
+     }
+    .servicio{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    }
+    .servicio h3{
+        font-weight:normal;
+        color: var(--navegador);
+    
+    }
+    .servicio p{
+    line-height: 1.8;
+    text-align: justify;
+    padding: 1rem;
+    }
+    .servicio .iconos{
+        height: 20rem;
+        width: 20rem;
+        background-color:black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        /*Sombra*/
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(122,113,122,0.78);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(122,113,122,0.78);
+        box-shadow: 0px 0px 15px 0px rgba(122,113,122,0.78);
+        
+    }
+    /*Formulario*/
+    .formulario{
+    background-color: var(--navegador-hov);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(122,113,122,0.78);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(122,113,122,0.78);
+        box-shadow: 0px 0px 15px 0px rgba(122,113,122,0.78);
+        width: min(60rem, 100%);   
+        margin: 0 auto;
+        padding: 2rem;
+        
+    }
+    .formulario fieldset{
+        border: none;
+    }
+    .formulario legend{
+        color: var(--letras);
+        text-align:center;
+        text-transform: uppercase;
+        padding-bottom: 1.8rem;
+        font-size: 18px;
+        padding-bottom: 3rem;
+    
+        
+    }
+    
+    .campo{
+    margin-bottom: 1rem;
+    }
+    .campo label{
+        color: var(--letras);
+        display: block;
+        margin-bottom: 0.8rem;
+    }
+    .campo input, #mensaje{
+        border-radius: 0.5rem;
+        width: 100%;
+        padding: 1.4rem;
+    }
+    .campo #mensaje{
+        height: 15rem;
+    }
+    .enviar .boton{
+        width: 100%;
+    }
+    
+    /*Termino formulario*/
+    footer p {
+        text-align: center;
+    }
+    
+    

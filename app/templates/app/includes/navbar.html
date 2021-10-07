@@ -1,0 +1,22 @@
+ <!--Cabecera-->
+ <header>
+    <h1 class="titulo">Cristobal Silva <span>practicante</span></h1>                  
+     
+</header>
+
+<div class="div-nav">
+<!--Barra de navegacion-->
+<nav class="navegador-principal contenedor">
+    {% load static%}
+    <a href="index">Inicio</a>
+    {% if user.is_authenticated %}
+    <a href="user">{{user.username}}</a>
+    <a href="logout"> Salir</a>
+    {%else%}
+    <a href="crearUsuario">Crear Sesion</a>
+    <a href="login_request">Iniciar Sesion</a>
+    {%endif%}
+
+</nav>
+
+</div>
